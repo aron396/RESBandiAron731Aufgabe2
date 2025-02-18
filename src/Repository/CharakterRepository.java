@@ -25,7 +25,7 @@ public class CharakterRepository {
         }
     }
 
-    public List<Charakter> getAllCharakters() {
+    public List<Charakter> getAllCharaktere() {
         return charakters;
     }
 

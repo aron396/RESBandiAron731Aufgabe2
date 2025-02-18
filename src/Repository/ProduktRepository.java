@@ -25,7 +25,7 @@ public class ProduktRepository {
         }
     }
 
-    public List<Produkt> getAllProdukts() {
+    public List<Produkt> getAllProdukte() {
         return produkts;
     }
 

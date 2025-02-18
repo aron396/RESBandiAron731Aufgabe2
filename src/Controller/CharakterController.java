@@ -27,8 +27,8 @@ public class CharakterController {
         charakterRepo.updateCharakter(id, updatedCharakter);
     }
 
-    public List<Charakter> getAllCharakters() {
-        return charakterRepo.getAllCharakters();
+    public List<Charakter> getAllCharaktere() {
+        return charakterRepo.getAllCharaktere();
     }
 
     public Charakter getCharakterById(int id) {

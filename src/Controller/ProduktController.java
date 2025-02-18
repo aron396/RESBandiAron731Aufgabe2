@@ -26,8 +26,8 @@ public class ProduktController {
         produktRepo.updateProdukt(oldName, updatedProdukt);
     }
 
-    public List<Produkt> getAllProdukts() {
-        return produktRepo.getAllProdukts();
+    public List<Produkt> getAllProdukte() {
+        return produktRepo.getAllProdukte();
     }
 
     public Produkt getProduktByName(String name) {
