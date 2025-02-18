@@ -6,31 +6,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProduktRepository {
-    private List<Produkt> produkts = new ArrayList<>();
+    private List<Produkt> produkte = new ArrayList<>();
 
     public void addProdukt(Produkt produkt) {
-        produkts.add(produkt);
+        produkte.add(produkt);
     }
 
     public void deleteProdukt(String name) {
-        produkts.removeIf(p -> p.getName().equalsIgnoreCase(name));
+        produkte.removeIf(p -> p.getName().equalsIgnoreCase(name));
     }
 
     public void updateProdukt(String name, Produkt updatedProduct) {
-        for (int i = 0; i < produkts.size(); i++) {
-            if (produkts.get(i).getName().equalsIgnoreCase(name)) {
-                produkts.set(i, updatedProduct);
+        for (int i = 0; i < produkte.size(); i++) {
+            if (produkte.get(i).getName().equalsIgnoreCase(name)) {
+                produkte.set(i, updatedProduct);
                 return;
             }
         }
     }
 
     public List<Produkt> getAllProdukte() {
-        return produkts;
+        return produkte;
     }
 
     public Produkt getProduktByName(String name) {
-        return produkts.stream()
+        return produkte.stream()
                 .filter(p -> p.getName().equalsIgnoreCase(name))
                 .findFirst()
                 .orElse(null);

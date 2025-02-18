@@ -6,31 +6,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CharakterRepository {
-    private List<Charakter> charakters = new ArrayList<>();
+    private List<Charakter> charaktere = new ArrayList<>();
 
     public void addCharakter(Charakter charakter) {
-        charakters.add(charakter);
+        charaktere.add(charakter);
     }
 
     public void deleteCharakter(int id) {
-        charakters.removeIf(c -> c.getId() == id);
+        charaktere.removeIf(c -> c.getId() == id);
     }
 
     public void updateCharakter(int id, Charakter updatedCharakter) {
-        for (int i = 0; i < charakters.size(); i++) {
-            if (charakters.get(i).getId() == id) {
-                charakters.set(i, updatedCharakter);
+        for (int i = 0; i < charaktere.size(); i++) {
+            if (charaktere.get(i).getId() == id) {
+                charaktere.set(i, updatedCharakter);
                 return;
             }
         }
     }
 
     public List<Charakter> getAllCharaktere() {
-        return charakters;
+        return charaktere;
     }
 
     public Charakter getCharakterById(int id) {
-        return charakters.stream()
+        return charaktere.stream()
                 .filter(c -> c.getId() == id)
                 .findFirst()
                 .orElse(null);
