@@ -29,7 +29,7 @@ public class ProduktRepository {
         return produkts;
     }
 
-    public Produkt getProductByName(String name) {
+    public Produkt getProduktByName(String name) {
         return produkts.stream()
                 .filter(p -> p.getName().equalsIgnoreCase(name))
                 .findFirst()
